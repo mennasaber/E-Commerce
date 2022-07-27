@@ -3,13 +3,15 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
-import { AccountsModule } from './account/accounts.module';
+import { AccountModule } from './account/account.module';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
     AuthModule,
-    AccountsModule,
+    AccountModule,
     MongooseModule.forRoot('mongodb://localhost/e-commerce'),
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService],

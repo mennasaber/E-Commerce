@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { Account, AccountDocument } from './schemas/account.schema';
 
 @Injectable()
-export class AccountsService {
+export class AccountService {
   constructor(
     @InjectModel(Account.name) private accountEntity: Model<AccountDocument>,
   ) {}
