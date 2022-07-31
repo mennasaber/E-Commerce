@@ -37,7 +37,7 @@ export class ProductController {
         .status(HttpStatus.OK)
         .json(await this.productService.GetProductById(id));
     } catch (error) {
-      res.status(HttpStatus.BAD_REQUEST).json(error);
+      res.status(HttpStatus.NOT_FOUND).json(error);
     }
   }
   @Post()

@@ -10,5 +10,9 @@ export class User {
   Lastname: string;
   @Prop()
   ImagePath: string;
+  @Prop()
+  IsDeleted: boolean;
+  @Prop()
+  DeletedAt: Date;
 }
 export const UserSchema = SchemaFactory.createForClass(User);
